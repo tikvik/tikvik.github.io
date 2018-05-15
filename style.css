@@ -18,15 +18,16 @@ body {
     -moz-columns: 350px;
     columns: 350px;
     -webkit-column-gap: 20px;
-    -moz-column-gap: 0px;
-    column-gap: 0px; }
+    -moz-column-gap: 10px;
+    column-gap: 10px; }
     body main article {
       -webkit-column-break-inside: avoid;
       page-break-inside: avoid;
       break-inside: avoid-column;
       position: relative;
       background-color: darkorange;
-      line-height: 0px; }
+      line-height: 0px;
+      margin-bottom: 20px; }
       body main article h3, body main article p {
         position: absolute;
         opacity: 0;
