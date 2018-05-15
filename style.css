@@ -4,6 +4,7 @@ a {
     color: black; }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -14,11 +15,14 @@ body {
   body main {
     padding-top: 6rem;
     -webkit-columns: 250px;
+    -moz-columns: 350px;
     columns: 350px;
     -webkit-column-gap: 20px;
-    column-gap: 0px; }
+    -moz-column-gap: 10px;
+    column-gap: 10px; }
     body main article {
       -webkit-column-break-inside: avoid;
+      page-break-inside: avoid;
       break-inside: avoid-column;
       position: relative;
       background-color: darkorange;
@@ -36,9 +40,13 @@ body {
       body main article img {
         width: 100%;
         opacity: 1;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s; }
       body main article a:hover img {
         opacity: 0;
+        -webkit-transition: opacity 0.5s;
+        -o-transition: opacity 0.5s;
         transition: opacity 0.5s; }
       body main article a:hover h3, body main article a:hover p {
         opacity: 1; }
