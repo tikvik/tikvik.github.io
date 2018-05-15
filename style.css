@@ -18,8 +18,8 @@ body {
     -moz-columns: 350px;
     columns: 350px;
     -webkit-column-gap: 20px;
-    -moz-column-gap: 10px;
-    column-gap: 10px; }
+    -moz-column-gap: 0px;
+    column-gap: 0px; }
     body main article {
       -webkit-column-break-inside: avoid;
       page-break-inside: avoid;
