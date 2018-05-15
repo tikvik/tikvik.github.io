@@ -1,0 +1,87 @@
+$gap: 2rem
+$hgap: $gap
+$vgap: $gap
+
+$duration: .5s
+// .animated
+// 	-webkit-animation-duration: $duration
+// 	animation-duration: $duration
+// 	-webkit-animation-fill-mode: both
+// 	animation-fill-mode: both
+
+$black: black
+
+a
+	color: $black
+	&:hover
+		color: $black
+
+
+*
+	box-sizing: border-box
+body
+	margin: 0
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+	font-size: 1rem
+	display: block
+
+	main
+		padding-top: 6rem
+		-webkit-columns: 250px
+		columns: 350px
+		-webkit-column-gap: 20px
+		column-gap: 0px
+
+		article
+			-webkit-column-break-inside: avoid
+			break-inside: avoid-column
+			position: relative
+			background-color: darkorange
+			line-height: 0px
+
+			h3
+				position: absolute
+				opacity: 0;
+				top: $vgap
+				left: $hgap
+				bottom: auto
+				right: $hgap
+
+			p
+				@extend h3
+				top: 1.6*$vgap
+				line-height: 1
+
+			img
+				width: 100%
+				opacity: 1
+				transition: opacity $duration
+			a
+				&:hover
+					img
+						opacity: 0
+						transition: opacity $duration
+					h3
+						opacity: 1
+
+.d-block
+	display: block
+
+.nav-top
+	position: fixed
+	width: 100%
+	padding: 10px $hgap
+	z-index: 2000
+	& > div
+		display: inline-block
+
+.fr
+	float: right
+
+.fl
+	float: left
+
+
+
+
+
