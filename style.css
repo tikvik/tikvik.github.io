@@ -8,54 +8,39 @@ a {
   box-sizing: border-box; }
 
 body {
-  margin: 0px 0px 0px 0px;
+  margin: 0px 1rem 0px 1rem;
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   font-size: 1rem;
   display: block; }
   body main {
-    padding-top: 6rem;
-    -webkit-columns: calc(97vw/3);
-    -webkit-column-width: calc(97vw/3);
-    -moz-column-width: calc(97vw/3);
-    column-width: calc(97vw/3);
-    -webkit-column-gap: 1rem;
-    -moz-column-gap: calc(3vw/3);
-    column-gap: calc(3vw/3); }
-    body main article {
-      -webkit-column-break-inside: avoid;
-      page-break-inside: avoid;
-      break-inside: avoid-column;
-      background-color: darkorange;
-      line-height: 0px;
-      overflow: hidden;
-      position: relative;
-      height: calc(97vw/3)/1.5;
-      margin-bottom: calc(3vw/3); }
-      body main article:nth-child(5) {
-        height: calc(calc(calc(calc(97vw/3)/1.5)*2) + 4.3vw / 3); }
-      body main article h3, body main article p {
-        position: absolute;
-        opacity: 0;
-        top: 1rem;
-        left: 1rem;
-        bottom: auto;
-        right: 1rem; }
-      body main article p {
-        top: 1.6rem;
-        line-height: 1; }
-      body main article img {
+    line-height: 0;
+    padding-top: 6rem; }
+    body main ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-auto-flow: dense;
+      margin: 0 auto;
+      grid-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+      body main ul li:nth-child(1) {
+        grid-row: span 2; }
+      body main ul li:nth-child(5) {
+        grid-row: span 2; }
+      body main ul li:nth-child(11) {
+        grid-row: span 2;
+        grid-column: span 2; }
+      body main ul li img {
+        height: 100%;
         width: 100%;
-        opacity: 1;
-        -webkit-transition: opacity 0.5s;
-        -o-transition: opacity 0.5s;
-        transition: opacity 0.5s; }
-      body main article a:hover img {
-        opacity: 0;
-        -webkit-transition: opacity 0.5s;
-        -o-transition: opacity 0.5s;
-        transition: opacity 0.5s; }
-      body main article a:hover h3, body main article a:hover p {
-        opacity: 1; }
+        -o-object-fit: cover;
+        object-fit: cover; }
+
+@media only screen and (min-width: 2170px) {
+  ul {
+    background-color: red;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 5fr)) !important; } }
 
 .d-block {
   display: block; }
