@@ -39,7 +39,6 @@ body {
 
 @media only screen and (min-width: 2170px) {
   ul {
-    background-color: red;
     grid-template-columns: repeat(auto-fit, minmax(450px, 5fr)) !important; } }
 
 .d-block {
