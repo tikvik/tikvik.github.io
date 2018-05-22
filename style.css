@@ -1,7 +1,7 @@
 a {
-  color: black; }
+  color: white; }
   a:hover {
-    color: black; }
+    color: white; }
 
 * {
   -webkit-box-sizing: border-box;
@@ -24,18 +24,43 @@ body {
       margin: 0 auto;
       grid-gap: 1rem;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
-      body main ul li:nth-child(1) {
-        grid-row: span 2; }
-      body main ul li:nth-child(5) {
-        grid-row: span 2; }
-      body main ul li:nth-child(11) {
-        grid-row: span 2;
-        grid-column: span 2; }
-      body main ul li img {
-        height: 100%;
-        width: 100%;
-        -o-object-fit: cover;
-        object-fit: cover; }
+      body main ul li {
+        position: relative;
+        background-color: #FF5D46; }
+        body main ul li:nth-child(1) {
+          grid-row: span 2; }
+        body main ul li:nth-child(5) {
+          grid-row: span 2; }
+        body main ul li:nth-child(11) {
+          grid-row: span 2;
+          grid-column: span 2; }
+        body main ul li img {
+          height: 100%;
+          width: 100%;
+          -o-object-fit: cover;
+          object-fit: cover;
+          opacity: 1;
+          -webkit-transition: opacity 0.5s;
+          -o-transition: opacity 0.5s;
+          transition: opacity 0.5s; }
+        body main ul li .text {
+          position: absolute;
+          opacity: 0;
+          top: 1rem;
+          left: 1rem;
+          bottom: auto;
+          right: 1rem;
+          -webkit-transition: opacity 0.5s;
+          -o-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+          line-height: 1.2; }
+        body main ul li:hover img {
+          opacity: 0;
+          -webkit-transition: opacity 0.5s;
+          -o-transition: opacity 0.5s;
+          transition: opacity 0.5s; }
+        body main ul li:hover .text {
+          opacity: 1; }
 
 @media only screen and (min-width: 2170px) {
   ul {
