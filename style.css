@@ -46,9 +46,9 @@ body {
         body main ul li .text {
           position: absolute;
           opacity: 0;
-          top: 1rem;
+          top: auto;
           left: 1rem;
-          bottom: auto;
+          bottom: 1rem;
           right: 1rem;
           -webkit-transition: opacity 0.5s;
           -o-transition: opacity 0.5s;
@@ -64,7 +64,15 @@ body {
 
 @media only screen and (min-width: 2170px) {
   ul {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 5fr)) !important; } }
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)) !important; } }
+
+@media only screen and (max-width: 760px) {
+  body {
+    margin: 0px; }
+  ul {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important; }
+    ul li {
+      grid-column: span 1 !important; } }
 
 .d-block {
   display: block; }
