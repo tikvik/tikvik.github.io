@@ -26,7 +26,9 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
       body main ul li {
         position: relative;
-        background-color: #FF5D46; }
+        background-color: white; }
+        body main ul li:hover {
+          background-color: #FF5D46; }
         body main ul li:nth-child(1) {
           grid-row: span 2; }
         body main ul li:nth-child(5) {
@@ -40,9 +42,9 @@ body {
           -o-object-fit: cover;
           object-fit: cover;
           opacity: 1;
-          -webkit-transition: opacity 0.5s;
-          -o-transition: opacity 0.5s;
-          transition: opacity 0.5s; }
+          -webkit-transition: opacity 0.3s;
+          -o-transition: opacity 0.3s;
+          transition: opacity 0.3s; }
         body main ul li .text {
           position: absolute;
           opacity: 0;
@@ -50,15 +52,15 @@ body {
           left: 1rem;
           bottom: 1rem;
           right: 1rem;
-          -webkit-transition: opacity 0.5s;
-          -o-transition: opacity 0.5s;
-          transition: opacity 0.5s;
+          -webkit-transition: opacity 0.3s;
+          -o-transition: opacity 0.3s;
+          transition: opacity 0.3s;
           line-height: 1.2; }
         body main ul li:hover img {
           opacity: 0;
-          -webkit-transition: opacity 0.5s;
-          -o-transition: opacity 0.5s;
-          transition: opacity 0.5s; }
+          -webkit-transition: opacity 0.3s;
+          -o-transition: opacity 0.3s;
+          transition: opacity 0.3s; }
         body main ul li:hover .text {
           opacity: 1; }
 
