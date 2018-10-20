@@ -7,6 +7,10 @@ $vgap: $gap
 	font-size: 2rem
 	font-weight: 600
 
+%h2
+	font-size: 1.4rem
+	font-weight: 600
+	margin-bottom: .5rem
 $duration: .5s
 // .animated
 // 	-webkit-animation-duration: $duration
@@ -21,12 +25,6 @@ $orange: #FD5F08
 
 @import "navbar.sass"
 
-
-
-.ml-auto
-	margin-left: auto
-.d-block
-	display: block
 a
 	text-decoration: none
 	color: $white 
@@ -42,6 +40,18 @@ body
 	font-size: 1rem
 	display: block
 	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+	.nav-top 
+		position: fixed
+		width: 100%
+		padding: 0px 1rem
+		z-index: 2000
+		.logo
+			a
+				color: $black
+				&:hover
+					color: $black
+		> div 
+			display: inline-block
 
 	main 
 		line-height: 0
@@ -120,20 +130,6 @@ body
 
 .d-block 
 	display: block
-
-.nav-top 
-	position: fixed
-	width: 100%
-	// padding: 10px 1rem
-	z-index: 2000
-	.logo
-		a
-			color: $black
-			&:hover
-				color: $black
-	> div 
-		display: inline-block
-
 
 .fr 
 	float: right
