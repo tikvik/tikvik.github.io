@@ -1,0 +1,49 @@
+.Navbar {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px;
+  color: white; }
+
+.Navbar__Link {
+  padding-right: 8px; }
+
+.Navbar__Items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Navbar__Items--right {
+  margin-left: auto; }
+
+.Navbar__Link-toggle {
+  display: none; }
+
+.Navbar__Items {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none; }
+
+.Navbar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.Navbar__Items--right {
+  margin-left: 0; }
+
+.Navbar__ToggleShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Navbar__Link-toggle {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: initial;
+  position: absolute;
+  cursor: pointer; }

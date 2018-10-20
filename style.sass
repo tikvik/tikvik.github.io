@@ -1,6 +1,11 @@
+
+
 $gap: 2rem
 $hgap: $gap
 $vgap: $gap
+%h1
+	font-size: 2rem
+	font-weight: 600
 
 $duration: .5s
 // .animated
@@ -10,78 +15,131 @@ $duration: .5s
 // 	animation-fill-mode: both
 
 $black: black
+$gray: gray
+$white: white
+$orange: #FD5F08
 
+@import "navbar.sass"
+
+
+
+.ml-auto
+	margin-left: auto
+.d-block
+	display: block
 a
-	color: $black
+	text-decoration: none
+	color: $white 
 	&:hover
-		color: $black
+		color: $white
 
 
 *
 	box-sizing: border-box
-body
-	margin: 0 20 0 20
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+
+body 
+	margin: 0 1rem
 	font-size: 1rem
 	display: block
+	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 
-	main
+	main 
+		line-height: 0
 		padding-top: 6rem
-		-webkit-columns: 250px
-		columns: 350px
-		-webkit-column-gap: 20px
-		column-gap: 20px
-
-		article
-			-webkit-column-break-inside: avoid
-			break-inside: avoid-column
-			position: relative
-			background-color: darkorange
-			line-height: 0px
-			margin-bottom: 20px;
-
-			h3
-				position: absolute
-				opacity: 0;
-				top: $vgap
-				left: $hgap
-				bottom: auto
-				right: $hgap
-
-			p
-				@extend h3
-				top: 1.6*$vgap
-				line-height: 1
-
-			img
-				width: 100%
-				opacity: 1
-				transition: opacity $duration
-			a
-				&:hover
-					img
+		ul 
+			padding: 0
+			list-style: none
+			display: grid
+			grid-auto-flow: dense
+			margin: 0 auto
+			grid-gap: 1rem
+			grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+			grid-template-rows: repeat(auto-fit, minmax(233px, 1fr))
+			li 
+				position: relative
+				background-color: $white
+				&:hover 
+					background-color: $orange
+					img 
 						opacity: 0
-						transition: opacity $duration
-					h3
+						//If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+						transition: opacity 0.3s
+
+					.text 
 						opacity: 1
 
-.d-block
+
+				&:nth-child(1) 
+					grid-row: span 2
+
+				&:nth-child(5) 
+					grid-row: span 2
+
+				&:nth-child(11) 
+					grid-row: span 2
+					grid-column: span 2
+
+				img 
+					height: 100%
+					width: 100%
+					object-fit: cover
+					opacity: 1
+					//If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: opacity 0.3s
+
+				.text 
+					position: absolute
+					opacity: 0
+					top: auto
+					left: 1rem
+					bottom: 1rem
+					right: 1rem
+					//If you use compass, instead of the line below you could use + transition($transition-1, $transition-2, $transition-3, $transition-4, $transition-5, $transition-6, $transition-7, $transition-8, $transition-9, $transition-10)
+					transition: opacity 0.3s
+					line-height: 1.2
+
+
+
+
+
+@media only screen and(min-width: 2170px) 
+	ul 
+		grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)) !important
+
+
+@media only screen and(max-width: 760px) 
+	body 
+		margin: 0
+
+	ul 
+		grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important
+		li 
+			grid-column: span 1 !important
+
+
+
+.d-block 
 	display: block
 
-.nav-top
+.nav-top 
 	position: fixed
 	width: 100%
-	padding: 10px $hgap
+	// padding: 10px 1rem
 	z-index: 2000
-	& > div
+	.logo
+		a
+			color: $black
+			&:hover
+				color: $black
+	> div 
 		display: inline-block
 
-.fr
+
+.fr 
 	float: right
 
-.fl
+.fl 
 	float: left
-
 
 
 

@@ -1,0 +1,47 @@
+//colors
+$color_pelorous_approx: #46acc2
+$white: white
+
+
+
+.Navbar 
+	background-color: $black
+	display: flex
+	color: $white
+
+.Navbar__Link 
+	padding: .5	rem
+
+
+.Navbar__Items 
+	display: flex
+
+.Navbar__Items--right 
+	margin-left: auto
+
+.Navbar__Link-toggle 
+	display: none
+
+// @media only screen and(max-width: 768px) 
+.Navbar__Items
+	@extend %h1
+	flex-direction: column
+	display: none
+	padding: 2rem 5rem 3.5rem 5rem
+
+.Navbar 
+	flex-direction: column
+
+.Navbar__Items--right 
+	margin-left: 0
+
+.Navbar__ToggleShow 
+	display: flex
+	top: 0;
+	right: 0;
+	width: 40vw;
+.Navbar__Link-toggle 
+	align-self: flex-end
+	display: initial
+	position: absolute
+	cursor: pointer

@@ -1,4 +1,68 @@
+.Navbar__Items {
+  font-size: 2rem;
+  font-weight: 600; }
+
+.Navbar {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white; }
+
+.Navbar__Link {
+  padding: .5	rem; }
+
+.Navbar__Items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.Navbar__Items--right {
+  margin-left: auto; }
+
+.Navbar__Link-toggle {
+  display: none; }
+
+.Navbar__Items {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  display: none;
+  padding: 2rem 5rem 3.5rem 5rem; }
+
+.Navbar {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.Navbar__Items--right {
+  margin-left: 0; }
+
+.Navbar__ToggleShow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  right: 0;
+  width: 40vw; }
+
+.Navbar__Link-toggle {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  display: initial;
+  position: absolute;
+  cursor: pointer; }
+
+.ml-auto {
+  margin-left: auto; }
+
+.d-block {
+  display: block; }
+
 a {
+  text-decoration: none;
   color: white; }
   a:hover {
     color: white; }
@@ -8,27 +72,34 @@ a {
   box-sizing: border-box; }
 
 body {
-  margin: 0px 1rem 0px 1rem;
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  margin: 0 1rem;
   font-size: 1rem;
-  display: block; }
+  display: block;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif; }
   body main {
     line-height: 0;
     padding-top: 6rem; }
     body main ul {
-      margin: 0;
       padding: 0;
       list-style: none;
       display: grid;
       grid-auto-flow: dense;
       margin: 0 auto;
       grid-gap: 1rem;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); }
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-rows: repeat(auto-fit, minmax(233px, 1fr)); }
       body main ul li {
         position: relative;
         background-color: white; }
         body main ul li:hover {
-          background-color: #FF5D46; }
+          background-color: #FD5F08; }
+          body main ul li:hover img {
+            opacity: 0;
+            -webkit-transition: opacity 0.3s;
+            -o-transition: opacity 0.3s;
+            transition: opacity 0.3s; }
+          body main ul li:hover .text {
+            opacity: 1; }
         body main ul li:nth-child(1) {
           grid-row: span 2; }
         body main ul li:nth-child(5) {
@@ -56,13 +127,6 @@ body {
           -o-transition: opacity 0.3s;
           transition: opacity 0.3s;
           line-height: 1.2; }
-        body main ul li:hover img {
-          opacity: 0;
-          -webkit-transition: opacity 0.3s;
-          -o-transition: opacity 0.3s;
-          transition: opacity 0.3s; }
-        body main ul li:hover .text {
-          opacity: 1; }
 
 @media only screen and (min-width: 2170px) {
   ul {
@@ -70,7 +134,7 @@ body {
 
 @media only screen and (max-width: 760px) {
   body {
-    margin: 0px; }
+    margin: 0; }
   ul {
     grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)) !important; }
     ul li {
@@ -82,8 +146,11 @@ body {
 .nav-top {
   position: fixed;
   width: 100%;
-  padding: 10px 1rem;
   z-index: 2000; }
+  .nav-top .logo a {
+    color: black; }
+    .nav-top .logo a:hover {
+      color: black; }
   .nav-top > div {
     display: inline-block; }
 
