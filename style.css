@@ -20,10 +20,7 @@
 .Navbar__Items {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex;
-  -webkit-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
+  display: flex; }
 
 .Navbar__Items--right {
   margin-left: auto; }
@@ -81,10 +78,10 @@ body {
   body .nav-top {
     position: fixed;
     width: 100%;
-    padding: 0px 1rem;
     z-index: 2000; }
     body .nav-top .logo {
-      padding-top: 1rem; }
+      padding-top: 1rem;
+      padding-left: 1.5rem; }
       body .nav-top .logo a {
         color: black; }
         body .nav-top .logo a:hover {
