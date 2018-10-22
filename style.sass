@@ -23,7 +23,15 @@ $gray: gray
 $white: white
 $orange: #FD5F08
 
+@font-face 
+    font-family: 'Metropolis'; 
+    src: url('fonts/Metropolis-Bold: .otf');
+
+
+
 @import "navbar.sass"
+
+
 
 a
 	text-decoration: none
@@ -39,13 +47,14 @@ body
 	margin: 0 1rem
 	font-size: 1rem
 	display: block
-	font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+	font-family: Metropolis,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
 	.nav-top 
 		position: fixed
 		width: 100%
 		padding: 0px 1rem
 		z-index: 2000
 		.logo
+			padding-top: 1rem	
 			a
 				color: $black
 				&:hover
