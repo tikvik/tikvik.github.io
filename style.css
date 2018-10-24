@@ -118,6 +118,13 @@ body {
             transition: opacity 0.3s; }
           body main ul li:hover .text {
             opacity: 1; }
+        body main ul li:nth-child(1) {
+          grid-row: span 2; }
+        body main ul li:nth-child(5) {
+          grid-row: span 2; }
+        body main ul li:nth-child(11) {
+          grid-row: span 2;
+          grid-column: span 2; }
         body main ul li img {
           height: 100%;
           width: 100%;
