@@ -1,0 +1,103 @@
+
+$gap: 1rem
+$hgap: $gap
+$vgap: $gap
+%h1
+	font-size: 2rem
+	font-weight: 600
+
+%h2
+	font-size: 1.4rem
+	font-weight: 600
+	margin-bottom: .5rem
+$duration: .5s
+// .animated
+// 	-webkit-animation-duration: $duration
+// 	animation-duration: $duration
+// 	-webkit-animation-fill-mode: both
+// 	animation-fill-mode: both
+
+$black: black
+$gray: gray
+$white: white
+$orange: #FD5F08
+
+@font-face 
+    font-family: 'Metropolis'; 
+    src: url('fonts/Metropolis-Bold: .otf');
+
+
+
+@import "navbar.sass"
+
+
+
+a
+	text-decoration: none
+	color: $white 
+	&:hover
+		color: $white
+
+
+*
+	box-sizing: border-box
+
+body 
+	margin: 0 1rem
+	font-size: 1rem
+	display: block
+	font-family: Metropolis,-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif
+	.nav-top 
+		position: fixed
+		width: 100%
+		z-index: 2000
+		.logo
+			padding-top: 1rem
+			padding-left: 1.5rem
+			a
+				color: $black
+				&:hover
+					color: $black
+		> div 
+			display: inline-block
+
+.page
+	main
+		ul	
+			display: grid
+			grid-gap: 0rem
+			padding: 0
+			list-style: none
+			margin: 0 auto
+			grid-template-columns: repeat(6,1fr)
+			grid-auto-rows: minmax(200px, auto)
+			li
+				background-color: green
+				border: 3px solid blue
+				&:nth-child(1) 
+					grid-column: span 6
+				&:nth-child(2) 
+					grid-column: span 3
+				&:nth-child(3) 
+					grid-column: span 3
+				&:nth-child(4) 
+					grid-column: span 2
+				&:nth-child(5) 
+					grid-column: span 2
+				&:nth-child(6) 
+					grid-column: span 2
+			// grid-gap: $gap
+			// grid-template-columns: repeat(auto-fit, minmax(350px, 1fr))
+			// grid-template-rows: repeat(auto-fit, minmax(233px, 1fr))
+.d-block 
+	display: block
+
+.fr 
+	float: right
+
+.fl 
+	float: left
+
+.img-fluid
+	width: 100%		
+	
