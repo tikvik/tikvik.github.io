@@ -88,11 +88,11 @@ body
 						opacity: 1
 
 
-				&:nth-child(1) 
-					grid-row: span 2
+				// &:nth-child(1) 
+				// 	grid-row: span 2
 
-				&:nth-child(5) 
-					grid-row: span 2
+				// &:nth-child(5) 
+				// 	grid-row: span 2
 
 
 
@@ -124,15 +124,27 @@ body
 			list-style: none
 			margin: 0 auto
 			grid-template-columns: repeat(6,1fr)
-			grid-auto-rows: minmax(200px, auto)
+			grid-auto-rows: repeat (4,1fr)
 			li
-				// border: 1px solid red
-			.full_six
+				background-color: lime
+			.c-6
 				grid-column: span 6
-			.three_six
+			.c-5
+				grid-column: span 5
+			.c-4
+				grid-column: span 4
+			.c-3
 				grid-column: span 3
-			.two_six
+			.c-2
 				grid-column: span 2
+			
+			.r-4
+				grid-row: span 4
+			.r-3
+				grid-row: span 3
+			.r-2
+				grid-row: span 2
+
 		
 				// &:nth-child(2) 
 				// 	grid-column: span 3
